@@ -6,14 +6,12 @@ import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { StickyCta } from "@/components/sticky-cta";
-import { PageRails } from "@/components/page-rails";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <PageRails />
-      <main className="relative z-10">
+      <main>
         <Hero />
         <Process />
         <Services />

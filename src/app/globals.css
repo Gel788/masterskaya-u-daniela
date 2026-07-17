@@ -33,12 +33,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
   background: var(--ink);
   color: var(--paper);
+  overflow-x: clip;
 }
 
 ::selection {
