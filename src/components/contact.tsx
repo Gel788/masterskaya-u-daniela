@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-ink px-4 pb-28 pt-16 sm:px-8 sm:py-28 lg:py-36"
+      className="relative overflow-hidden bg-ink px-4 py-16 sm:px-8 sm:py-28 lg:py-36"
     >
       <div className="relative mx-auto max-w-5xl">
         <Reveal>

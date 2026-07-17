@@ -5,7 +5,6 @@ import { Services } from "@/components/services";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
-import { StickyCta } from "@/components/sticky-cta";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <StickyCta />
     </>
   );
 }
