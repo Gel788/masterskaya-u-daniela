@@ -22,58 +22,45 @@ const points = [
 
 export function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden bg-ink px-4 py-16 sm:px-8 sm:py-28 lg:py-36"
-    >
-      <div className="relative mx-auto max-w-5xl">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-20">
+    <section id="about" className="bg-ink px-5 py-14 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
               О мастерской
             </p>
-            <h2 className="font-display mt-3 text-balance text-[clamp(1.65rem,6vw,3.5rem)] font-extrabold leading-[1.05] tracking-[-0.04em] text-paper sm:mt-4">
-              Ремонт,
-              <br />
-              которого не видно
+            <h2 className="font-display mt-2 text-[1.65rem] font-bold leading-tight tracking-[-0.03em] text-paper sm:mt-3 sm:text-[clamp(2rem,4vw,3rem)] sm:font-extrabold">
+              Ремонт, которого не видно
             </h2>
-            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted sm:mt-6 sm:text-lg">
+            <p className="mt-4 text-[14px] leading-relaxed text-muted sm:text-base">
               Восстанавливаем кузов от локальной покраски до геометрии после
               удара. Ровный металл, точный цвет, заводская сборка.
             </p>
-
-            <figure className="mt-8 rounded-2xl bg-white/[0.03] p-5 sm:mt-10 sm:p-9">
-              <blockquote className="font-display text-[clamp(1.1rem,4vw,1.75rem)] leading-snug tracking-tight text-paper">
-                «Хороший кузовной ремонт — тот, который невозможно найти
-                глазами».
-              </blockquote>
-              <figcaption className="mt-5 text-sm text-muted sm:mt-6">
-                Мастерская у Даниела · Белозерская, 10
-              </figcaption>
-            </figure>
+            <blockquote className="mt-6 border-l-2 border-accent/50 pl-4 font-display text-[1.05rem] leading-snug text-paper sm:mt-8 sm:text-xl">
+              «Хороший кузовной ремонт — тот, который невозможно найти
+              глазами».
+            </blockquote>
           </Reveal>
 
-          <div className="grid gap-3">
+          <ul className="grid gap-2.5">
             {points.map((point, i) => (
-              <Reveal key={point.title} delay={0.05 * i} y={14}>
-                <article className="group h-full rounded-2xl bg-white/[0.03] p-4 transition-colors duration-300 hover:bg-white/[0.05] sm:p-6">
-                  <div className="flex items-start gap-3 sm:gap-3.5">
-                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/12 text-accent">
-                      <CheckIcon className="h-4 w-4" />
-                    </span>
-                    <div className="min-w-0">
-                      <h3 className="font-display text-base font-semibold tracking-tight text-paper">
-                        {point.title}
-                      </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                        {point.text}
-                      </p>
-                    </div>
+              <Reveal key={point.title} delay={0.04 * i} y={10}>
+                <li className="flex gap-3 rounded-xl bg-white/[0.035] px-3.5 py-3.5 sm:gap-3.5 sm:px-5 sm:py-4">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                    <CheckIcon className="h-3.5 w-3.5" />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[14px] font-semibold text-paper sm:text-base">
+                      {point.title}
+                    </h3>
+                    <p className="mt-0.5 text-[12.5px] leading-relaxed text-muted sm:mt-1 sm:text-sm">
+                      {point.text}
+                    </p>
                   </div>
-                </article>
+                </li>
               </Reveal>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
