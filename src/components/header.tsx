@@ -32,13 +32,14 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-8 sm:py-4">
         <Link
           href="#top"
           onClick={closeMenu}
-          className="font-display cursor-pointer text-[15px] font-semibold tracking-tight text-paper"
+          className="min-w-0 shrink cursor-pointer font-display text-[13px] font-semibold leading-snug tracking-tight text-paper sm:text-[15px] sm:leading-tight"
         >
-          Мастерская <span className="text-muted">у Даниела</span>
+          <span className="block sm:inline">Мастерская</span>
+          <span className="block sm:ml-1.5 sm:inline">у Даниела</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
