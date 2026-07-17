@@ -32,14 +32,26 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-8 sm:py-4">
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-3 px-4 sm:h-16 sm:gap-4 sm:px-8">
         <Link
           href="#top"
           onClick={closeMenu}
-          className="min-w-0 shrink cursor-pointer font-display text-[13px] font-semibold leading-snug tracking-tight text-paper sm:text-[15px] sm:leading-tight"
+          className="group flex min-w-0 items-center gap-2.5 cursor-pointer sm:gap-3"
         >
-          <span className="block sm:inline">Мастерская</span>
-          <span className="block sm:ml-1.5 sm:inline">у Даниела</span>
+          <span
+            className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] transition-colors group-hover:border-accent/40"
+            aria-hidden
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_var(--accent)]" />
+          </span>
+          <span className="flex min-w-0 flex-col justify-center">
+            <span className="font-display text-[9px] font-medium uppercase tracking-[0.22em] text-white/45">
+              Мастерская
+            </span>
+            <span className="font-display text-[15px] font-semibold leading-none tracking-[-0.02em] text-paper sm:text-base">
+              у Даниела
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
